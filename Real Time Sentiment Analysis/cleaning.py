@@ -1,3 +1,4 @@
+'''
 #import pandas to deal with the dataset
 import pandas as pd
 import re
@@ -13,7 +14,7 @@ def cleaning(sentence):
     review = re.sub("[^a-zA-Z]"," ",sentence)
     review = review.lower()
     review = review.split()
-	review = [ps.stem(word) for word in review if not word in set(stopwords.words("english"))]
+    review = [ps.stem(word) for word in review if not word in set(stopwords.words("english"))]
     review=" ".join(review)
     corpus.append(review)
     
@@ -31,3 +32,4 @@ def cleaning(sentence):
     #cm=confusion_matrix(y_test,y_pred)
     y_pred = classifier.predict(sentence)
     return y_pred
+'''
